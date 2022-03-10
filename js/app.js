@@ -165,3 +165,4 @@ const loadPosts = async () =>{
 }
 
 loadPosts();
+const data = '';
