@@ -8,6 +8,7 @@ const getLikedPosts = () => {
 };
 
 const getReportedPosts = () => {
+  console.log()
     return posts.filter((post) => reportedPostsId.includes(post.id));
 };
 
@@ -53,7 +54,7 @@ const switchTab = (id) => {
     }
 };
 
-//User Image of Post fixed
+//User Image of Post fixed and commentor's name and comments fixed
 const createPost = (post) => {
     const image = post.image;
     const div = document.createElement( "article" );
@@ -124,6 +125,7 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
+                      
                           ${post.comments[0]?.user}
                       </a>
                       ${post.comments[0]?.text}
