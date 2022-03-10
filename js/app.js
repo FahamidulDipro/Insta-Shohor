@@ -52,6 +52,7 @@ const switchTab = (id) => {
     }
 };
 
+//User Image of Post fixed
 const createPost = (post) => {
     const image = post.image;
     const div = document.createElement( "article" );
@@ -64,7 +65,7 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${image}" alt="User Picture" />
+                    <img src="${post.userImage}" alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
@@ -164,6 +165,7 @@ const loadPosts = async () =>{
   let data = await fetch('../data/posts.json');
   posts = await data.json();
   showPosts(posts);
+  console.log(posts);
 }
 
  
