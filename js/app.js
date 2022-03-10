@@ -15,8 +15,10 @@ const isLiked = (id) => {
     return likedPostsId?.length && !!likedPostsId.includes(id);
 };
 
+
+//addToLiked function fixed, the array method 'push' was misspelled as 'plus'
 const addToLiked = (id) => {
-    likedPostsId.plus(id); 
+    likedPostsId.push(id); 
     showPosts(posts);
 };
 
@@ -164,5 +166,6 @@ const loadPosts = async () =>{
   showPosts(posts);
 }
 
+ 
 loadPosts();
-const data = '';
+ 
