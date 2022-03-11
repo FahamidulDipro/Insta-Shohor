@@ -8,7 +8,7 @@ const getLikedPosts = () => {
 };
 
 const getReportedPosts = () => {
-  console.log()
+ 
     return posts.filter((post) => reportedPostsId.includes(post.id));
 };
 
@@ -158,7 +158,9 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    console.log(reportedPosts);
+    //Reported Post page shows all posts fixed
+     reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
     });
@@ -168,8 +170,7 @@ const loadPosts = async () =>{
   let data = await fetch('../data/posts.json');
   posts = await data.json();
   showPosts(posts);
-  console.log(posts);
-}
+ }
 
  
 loadPosts();
